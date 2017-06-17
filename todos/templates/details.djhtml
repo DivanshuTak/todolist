@@ -1,7 +1,7 @@
-{% include 'partials/header.html'%}
+{% include 'partials/header.djhtml'%}
 	<h1>{{todo.title}}</h1>
 	<p>
 		{{todo.text}}
 		<br>{{todo.created_at}}
 	</p>
-{% include 'partials/footer.html'%}
+{% include 'partials/footer.djhtml'%}

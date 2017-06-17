@@ -1,7 +1,8 @@
-{% include 'partials/header.html'%}
+{% include 'partials/header.djhtml'%}
 	<ul>
 		{% for todo in todos%}
 			<li><a href="/todos/details/{{todo.id}}">{{todo.title}}</a>: {{todo.text}}</li>
 		{% endfor %}
 	</ul>
-{% include 'partials/footer.html'%}
+{% include 'partials/footer.djhtml'%}
+

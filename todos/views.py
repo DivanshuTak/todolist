@@ -9,14 +9,14 @@ def index(request):
     context = {
             'todos':todos
         }
-    return render(request, 'index.html', context)
+    return render(request, 'index.djhtml', context)
 
 def details(request, id):
     todo = Todo.objects.get(id = id)
     context = {
             'todo':todo
         }
-    return render(request, 'details.html', context)
+    return render(request, 'details.djhtml', context)
 
 def add(request):
     if(request.method == 'POST'):
@@ -28,4 +28,4 @@ def add(request):
         
         return redirect('/todos')
     else:
-        return render(request,'add.html')
+        return render(request,'add.djhtml')

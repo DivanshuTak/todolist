@@ -1,4 +1,4 @@
-{% include 'partials/header.html'%}
+{% include 'partials/header.djhtml'%}
 <form action="{% url 'add' %}" method="post">
 {% csrf_token %}
 	<label for="title">Title</label><br />
@@ -10,4 +10,4 @@
 
 </form>
 <a href="/">Go Back</a>
-{% include 'partials/footer.html'%}
+{% include 'partials/footer.djhtml'%}
