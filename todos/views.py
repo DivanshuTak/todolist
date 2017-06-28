@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse 
 from todos.models import Todo
-from django.template.context_processors import request
 
 
 def index(request):
@@ -22,8 +21,9 @@ def add(request):
     if(request.method == 'POST'):
         title = request.POST['title']
         text = request.POST['text']
+        created_at = request.POST['created_at']
         
-        todo =  Todo(title=title, text=text)
+        todo =  Todo(title=title, text=text , created_at=created_at)
         todo.save()
         
         return redirect('/todos')

@@ -1,10 +1,14 @@
 from django.conf.urls import url
-
+ 
 from . import views
-from django.conf.urls.i18n import urlpatterns
+
+
+
 
 urlpatterns = [
-    url(r'^$', views.index , name = 'index' ),
+    url(r'^$', views.index , name='index' ),
     url(r'^details/(?P<id>\w{0,50})/$', views.details),
-    url(r'^add$', views.add , name= 'add' ),
+    url(r'^add', views.add , name= 'add' ),
+#     url(r'^show_urls$', views.show_urls , name= 'show_urls' ),
 ]
+
