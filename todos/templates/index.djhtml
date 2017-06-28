@@ -1,8 +1,24 @@
-{% include 'partials/header.djhtml'%}
+<!-- 
 	<ul>
 		{% for todo in todos%}
-			<li><a href="/todos/details/{{todo.id}}">{{todo.title}}</a>: {{todo.text}}</li>
+			<li><a href="/todos/details/{{todo.id}}">{{todo.title}}</a> : {{todo.text}}</li>
 		{% endfor %}
-	</ul>
-{% include 'partials/footer.djhtml'%}
+	</ul> -->
 
+{% include 'partials/header.djhtml'%}
+<div class="container">
+	{% for todo in todos%}
+	<div class="row">
+		<div class="col-lg-4"><a href="/todos/details/{{todo.id}}">{{todo.title}} </a>:</div>
+		<div class="col-lg-4">	
+			<input value="{{todo.text}}" disabled="disabled"/>
+		</div>
+		<div class="col-lg-4">			
+			<input value="{{todo.created_at}}" disabled="disabled"/>
+		</div>
+	</div>
+	{% endfor %}
+	
+</div>
+
+{% include 'partials/footer.djhtml'%}

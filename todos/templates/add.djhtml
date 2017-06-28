@@ -1,13 +1,56 @@
 {% include 'partials/header.djhtml'%}
-<form action="{% url 'add' %}" method="post">
-{% csrf_token %}
-	<label for="title">Title</label><br />
-	<input type="text" name="title" id="title" />
-	<br/><br />
-	<label for="text">Text</label><br />
-	<textarea name="text" id="text"></textarea><br/><br/>
-	<input type="submit" value="submit">
 
-</form>
-<a href="/">Go Back</a>
-{% include 'partials/footer.djhtml'%}
+<div class="container-fluid">
+
+                
+                <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">               
+                <form action="{% url 'add' %}" method="post">
+                {% csrf_token %}
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label for="title">Title</label>
+                            <input type="text" class="form-control" placeholder="Title" name="title" id="title" required="" data-validation-required-message="Please enter title of todo" aria-invalid="false">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label for="text">Task Description</label>
+                            <textarea rows="5" class="form-control" placeholder="Task Description" name="text" id="text" required="" data-validation-required-message="Please enter task description" aria-invalid="false"></textarea>
+                            <p class="help-block text-danger"></p>    
+						</div>
+						
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-xs-2 floating-label-form-group controls">
+	                        <label for="created_at">Schedule Time</label>
+	                        <div class="input-group">
+							    <input type="datetime-local" class="form-control" name = "created_at" id = "created_at">
+							    <span class="input-group-addon">
+							        <span class="glyphicon glyphicon-time"></span>
+							    </span>
+							</div>
+						</div>
+                    </div>
+                    <br>
+                    <div id="success"></div>
+                    <div class="row">
+                        <div class="form-group col-xs-12">
+                            <button type="submit" value="submit" class="btn btn-default btn-info">Submit</button>
+                        </div>
+                    </div>
+                    
+
+                </form>
+            </div>
+        </div>
+<hr>
+			<div class="row">
+                <div class="col-lg-12">
+                            <a href="{% url 'index' %}" class="btn btn-warning">Go Back</a>
+                    </div>
+            </div>            
+</div>
+{% include 'partials/footer.djhtml' %}
