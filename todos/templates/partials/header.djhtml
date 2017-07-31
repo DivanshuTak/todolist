@@ -14,20 +14,16 @@
 		<title>Todolist</title>
 	</head>
 <body>
-	<header>
+	<header><br>
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-lg-12 text-center ">
-				<div class="panel-heading">
-				    <h2>Todolist</h2>
-				</div>
-		    </div>
+			<div class="col-lg-11">
+				<a href="{% url 'add' %}" class="btn btn-success pull-right"><span class="glyphicon glyphicon-plus"></span> Add Todo</a>		       
+	        </div>
+	        <div class="col-lg-1">
+		        <a href="{% url 'index' %}" class="btn btn-warning pull-right"><span class="glyphicon glyphicon-home"></span> Home</a>
+	        </div>  
 		</div>
-		<div class="row">
-			<div class="col-lg-12 	 ">
-				<a href="/todos/add" class="btn btn-success btn-sm page-scroll">Add Todo</a>
-			</div>
-		</div>
+		
 	</div>	
-		<hr>
 	</header>

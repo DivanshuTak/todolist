@@ -1,4 +1,15 @@
 {% include 'partials/header.djhtml'%}
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 text-center ">
+				<div class="panel-heading">
+				    <h2>Add Task</h2>
+				</div>
+		    </div>
+		    
+		</div>
+		<hr>
+	</div>
 	<div class="container-fluid">
 	        <div class="row well">
 	            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">               
